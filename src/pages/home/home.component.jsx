@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom"; 
 
 import './home.styles.scss';
 
@@ -12,6 +13,7 @@ class Home extends React.Component {
 
   handleChange(event) { this.setState({ value: event.target.value }); }
   handleSubmit(event) {
+    // TODO: persist thought to database
     alert('A thought was submitted: ' + this.state.value);
     event.preventDefault();
   }
@@ -23,12 +25,14 @@ class Home extends React.Component {
 
         <p>What are you thinking right now?</p>
 
-        {/* needs troubleshooting on the css for the input box */}
         <div class="thought-input">
           <input type="text" value={this.state.value} onChange={this.handleChange}></input>
-          
           <button type="submit"><i class="icon ion-android-arrow-forward"></i></button>
         </div>
+
+        <div>
+            <Link to="/randomthought" className="others">What are others thinking</Link>
+         </div>
 
       </form>
     );
