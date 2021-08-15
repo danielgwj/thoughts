@@ -10,7 +10,7 @@
   color: white;
 }
 
-.footer{
+.footer {
   padding: 1rem;
   background-color: rgba(46, 45, 43, 0.651);
   position: fixed;
@@ -18,7 +18,7 @@
   width: 100%;
 }
 
-.footertext {
+.footer-text {
   font-size: 1.0rem;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
